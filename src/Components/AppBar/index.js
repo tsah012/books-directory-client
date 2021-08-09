@@ -6,7 +6,7 @@ function AppBar() {
         <div>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
+                <li><a href="#">Library</a></li>
                 <li><a href="#">Contact</a></li>
                 <li style={{float:'right'}}><a className="active" href="#">Logout</a></li>
             </ul>
