@@ -1,3 +1,7 @@
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -25,3 +29,12 @@ ul {
   .active {
     background-color: #2767df;
   }
+
+
+
+
+
+`
+;
+
+export default Wrapper

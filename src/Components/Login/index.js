@@ -1,9 +1,9 @@
 import React from 'react'
-import './index.css'
+import Wrapper from './index.css.js'
 
 function Login() {
     return (
-        <>
+        <Wrapper>
             <div className="wrapper">
                 <div id="formContent">
                     <h1>Login</h1>
@@ -17,7 +17,7 @@ function Login() {
                     </div>
                 </div>
             </div>
-        </>
+        </Wrapper>
     )
 }
 

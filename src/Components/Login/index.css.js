@@ -1,3 +1,7 @@
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+
 a {
   color: #92badd;
   display:inline-block;
@@ -135,3 +139,8 @@ input[type=text]:placeholder {
 * {
   box-sizing: border-box;
 }
+
+`
+;
+
+export default Wrapper

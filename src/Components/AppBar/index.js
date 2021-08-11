@@ -1,16 +1,16 @@
 import React from 'react'
-import './index.css'
+import Wrapper from './index.css.js'
 
 function AppBar() {
     return (
-        <div>
+        <Wrapper>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Library</a></li>
                 <li><a href="#">Contact</a></li>
                 <li style={{float:'right'}}><a className="active" href="#">Logout</a></li>
             </ul>
-        </div>
+        </Wrapper>
     )
 }
 
