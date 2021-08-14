@@ -1,14 +1,10 @@
 import React from 'react'
-import Login from '../Login'
-import AppBar from '../AppBar'
-import Home from '../Home'
+import AppRouter from '../AppRouter'
 
 function App() {
     return (
         <div>
-            <AppBar />
-            <Home />
-            <Login />
+            <AppRouter />
         </div>
     )
 }

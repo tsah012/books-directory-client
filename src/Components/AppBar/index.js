@@ -1,14 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Wrapper from './index.css.js'
 
 function AppBar() {
     return (
         <Wrapper>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Library</a></li>
-                <li><a href="#">Contact</a></li>
-                <li style={{float:'right'}}><a className="active" href="#">Logout</a></li>
+                <li><Link to='/'> Home </Link></li>
+                <li><Link to="login"> Login </Link></li>
+                <li style={{ float: 'right' }}><a className="active" href="#">Logout</a></li>
             </ul>
         </Wrapper>
     )
