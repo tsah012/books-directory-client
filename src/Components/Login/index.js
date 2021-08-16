@@ -17,7 +17,7 @@ function Login() {
         if (auth.isLogged) {
             history.push('/');
         }
-    }, []);
+    });
 
     const performLogin = async () => {
         try {
@@ -26,17 +26,19 @@ function Login() {
             const response = await axios.post(process.env.REACT_APP_SERVER_END_POINT + '/login', {
                 mail: mail,
                 password: password
-            });
+            }, { withCredentials: true });
 
             if (response.data.status) {
                 console.log('login success');
-                dispatch({ type: LOGGED_IN })
+                const user = await axios.get(process.env.REACT_APP_SERVER_END_POINT + '/api/user', { withCredentials: true });
+                dispatch({ type: LOGGED_IN, payload: user.data });
                 history.push('/');
+
             }
         }
         catch (error) {
             console.log('error occurred during login. error:\n' + error);
-            dispatch(LOGIN_FAILURE, error);
+            dispatch({ type: LOGIN_FAILURE, payload: error.message || '' });
         }
     }
 
