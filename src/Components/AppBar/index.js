@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { LOGIN, LOGOUT, LOGGED_IN, LOGGED_OUT, LOGIN_FAILURE, LOGOUT_FAILURE } from '../../actions/auth';
+import { LOGOUT, LOGGED_OUT, LOGOUT_FAILURE } from '../../actions/auth';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import Wrapper from './index.css.js';
@@ -29,8 +29,8 @@ function AppBar() {
             <Wrapper>
                 <ul>
                     <li><Link to='/'> Home </Link></li>
-                    <li> Library </li>
-                    <li style={{ float: 'right' }}><a className="active" onClick={performLogout}>Logout</a></li>
+                    <li><Link> Library </Link></li>
+                    <li style={{ float: 'right' }}><Link className="active" onClick={performLogout}>Logout</Link></li>
                 </ul>
             </Wrapper>
         )

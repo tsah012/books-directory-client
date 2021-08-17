@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { LOGIN, LOGOUT, LOGGED_IN, LOGGED_OUT, LOGIN_FAILURE } from '../../actions/auth';
+import { LOGIN, LOGGED_IN, LOGIN_FAILURE } from '../../actions/auth';
 import axios from 'axios';
 import Wrapper from './index.css.js';
 

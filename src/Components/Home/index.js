@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import axios from 'axios'
+import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
 function Home() {

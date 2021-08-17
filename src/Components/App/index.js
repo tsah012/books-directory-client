@@ -6,8 +6,7 @@ import { LOGGED_IN, LOGGED_OUT, LOGIN_FAILURE } from '../../actions/auth';
 
 function App() {
     const dispatch = useDispatch();
-
-    useEffect(async () => {
+    async function fetchUserData (){
         try {
             const response = await axios.get(process.env.REACT_APP_SERVER_END_POINT + '/api/user', { withCredentials: true });
 
@@ -22,6 +21,10 @@ function App() {
             console.log('error occurred during fetching user data. error:\n' + error);
             dispatch({ type: LOGIN_FAILURE, payload: error.message || '' });
         }
+    }
+
+    useEffect(() => {
+        fetchUserData();
     }, []);
 
     return (
