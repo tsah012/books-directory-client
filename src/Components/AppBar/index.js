@@ -13,7 +13,7 @@ function AppBar() {
     const performLogout = async () => {
         try {
             dispatch({type: LOGOUT});
-            const response = await axios.delete(process.env.REACT_APP_SERVER_END_POINT + '/logout');
+            const response = await axios.delete(process.env.REACT_APP_SERVER_END_POINT + '/logout', { withCredentials: true });
             if (response.data.status){
                 dispatch({type: LOGGED_OUT});
                 history.push('/login')
