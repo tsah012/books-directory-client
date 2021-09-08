@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import Book from '../Book'
 
 function Home() {
     const auth = useSelector(state => state.auth)
@@ -20,8 +21,8 @@ function Home() {
                     <h2>your books:</h2>
                     <br />
                     <ul>
-                        {[1, 2, 3, 4, 5].map(function (member) {
-                            return <li key={member}>{member}</li>
+                        {auth.user.books.map(function (book) {
+                            return <Book key={book._id} {...book} />
                         })}
                     </ul>
                 </section>
