@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import bookImage from '../../static/images/book.jpg';
 import Wrapper from './index.css.js';
 
