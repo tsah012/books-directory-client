@@ -29,7 +29,7 @@ function AppBar() {
             <Wrapper>
                 <ul>
                     <li><Link to='/'> Home </Link></li>
-                    <li><Link> Library </Link></li>
+                    <li><Link to='/library'> Library </Link></li>
                     <li style={{ float: 'right' }}><Link className="active" onClick={performLogout}>Logout</Link></li>
                 </ul>
             </Wrapper>

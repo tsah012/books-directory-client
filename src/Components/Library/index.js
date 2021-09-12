@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Wrapper from './index.css.js';
+import axios from 'axios';
+import Book from '../Book';
 
 function Library() {
     const [books, setbooks] = useState([]);
@@ -32,11 +34,9 @@ function Library() {
         return (
             <Wrapper>
                 <section>
-                    <h1>Hi {auth.user.name}</h1>
-                    <h2>your books:</h2>
-                    <br />
+                    <h1> Library: </h1>
                     <ul>
-                        {auth.user.books.map(function (book) {
+                        {books.map(function (book) {
                             return <Book key={book._id} {...book} />
                         })}
                     </ul>
