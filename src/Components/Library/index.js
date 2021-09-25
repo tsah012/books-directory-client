@@ -20,6 +20,19 @@ function Library() {
         }
     }
 
+    async function saveChanges(){
+        alert('hello');
+        // try {
+        //     const response = await axios.get(process.env.REACT_APP_SERVER_END_POINT + '/api/user/books', { withCredentials: true });
+        //     console.log(response.data);
+        //     auth.user.books = response.data;
+        //     fetchBooks();
+        // }
+        // catch (error) {
+        //     console.log('error occurred during fetching user data. error:\n' + error);
+        // }
+    }
+
     useEffect(() => {
         fetchBooks();
     }, [])
@@ -40,6 +53,9 @@ function Library() {
                             return <Book key={book._id} {...book} />
                         })}
                     </ul>
+                    <div>
+                        <button onClick={saveChanges} style={{fontWeight: 'bold'}}>Save</button>
+                    </div>
                 </section>
             </Wrapper>
         )

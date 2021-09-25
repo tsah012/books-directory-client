@@ -10,7 +10,9 @@ background-color: beige;
 width: 110px;
 height: 200px;
 overflow: hidden;
-
+[isChosen=true] {
+  background-color: green;
+}
 `
 
 export default Wrapper;

@@ -3,23 +3,23 @@ import bookImage from '../../static/images/book.jpg';
 import Wrapper from './index.css.js';
 
 function Book(props) {
-    const [borrowed, setborrowed] = useState(false)
+    const [chosen, setchosen] = useState(false)
 
     function handleClick() {
-        setborrowed(!borrowed)
+        setchosen(!chosen)
     }
 
     useEffect(() => {
         window.addEventListener('click', handleClick);
 
         return () => {
-            window.removeEventListener('keydown', handleClick);
+            window.removeEventListener('click', handleClick);
         };
     }, []);
 
     return (
         <Wrapper>
-            <div id={props._id} isBorrowed={borrowed}>
+            <div id={props._id} aaa isChosen={chosen}>
                 <img src={bookImage} width='100' height='150'></img>
                 <div> {props.name} </div>
                 <div> {props.author} </div>
