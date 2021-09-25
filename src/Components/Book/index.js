@@ -19,7 +19,7 @@ function Book(props) {
 
     return (
         <Wrapper>
-            <div id={props._id} aaa isChosen={chosen}>
+            <div id={props._id} isChosen={chosen}>
                 <img src={bookImage} width='100' height='150'></img>
                 <div> {props.name} </div>
                 <div> {props.author} </div>
